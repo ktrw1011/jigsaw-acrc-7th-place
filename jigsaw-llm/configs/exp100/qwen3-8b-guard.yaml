@@ -1,0 +1,15 @@
+exp_name: "Qwen3Guard-8b"
+tracking: true
+base_model_name_or_path: "Qwen/Qwen3Guard-Gen-8B"
+model_name_or_path: "input/Qwen/Qwen3Guard-Gen-8B"
+base_tokenizer_name_or_path: "Qwen/Qwen3-8B"
+tokenizer_name_or_path: "input/Qwen/Qwen3Guard-Gen-8B"
+learning_rate: 2e-4
+train_batch_size: 4
+eval_batch_size: 4
+eval_steps_ratio: 1.0
+save_steps_ratio: 1.0
+num_train_epochs: 1
+load_in_4bit: True
+load_in_8bit: False
+gradient_accumulation_steps: 1

@@ -1,0 +1,15 @@
+exp_name: "phi-4"
+tracking: true
+base_model_name_or_path: "microsoft/phi-4"
+model_name_or_path: "input/unsloth/phi-4-unsloth-bnb-4bit"
+base_tokenizer_name_or_path: "microsoft/phi-4"
+tokenizer_name_or_path: "input/unsloth/phi-4-unsloth-bnb-4bit"
+learning_rate: 1e-4
+train_batch_size: 4
+eval_batch_size: 4
+eval_steps_ratio: 1.0
+save_steps_ratio: 1.0
+num_train_epochs: 1
+load_in_4bit: True
+load_in_8bit: False
+gradient_accumulation_steps: 1

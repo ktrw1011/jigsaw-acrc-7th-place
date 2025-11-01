@@ -1,0 +1,90 @@
+[project]
+name = "kaggle-jigsaw-acrc"
+version = "0.1.0"
+requires-python = "==3.11.*"
+dependencies = [
+    "ipykernel>=6.30.0",
+    "ipywidgets>=8.1.7",
+    "jinja2>=3.1.6",
+    "kaggle>=1.7.4.5",
+    "kagglehub>=0.3.12",
+    "loguru>=0.7.3",
+    "mypy>=1.17.0",
+    "openai>=1.90.0",
+    "pandas>=2.3.1",
+    "scikit-learn>=1.7.1",
+    "transformers>=4.54.0",
+    "typer>=0.16.0",
+]
+
+[tool.uv]
+no-build-isolation-package = ["flash-attn"]
+
+[tool.uv.workspace]
+members = [
+    "jigsaw",
+    "jigsaw-llm",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.5",
+    "mypy>=1.17.0",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+ignore = [
+    "D",
+    "PGH",
+    "TRY",
+    "EM",
+    "FBT",
+    "T",
+    "TD",
+    "FIX",
+    "RET504",
+    "PD901",
+    "S101",
+    "ERA001",
+    "N812",
+    "BLE",
+    "RUF003",
+]
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+
+[tool.ruff.isort]
+section-order = ["future", "standard-library", "unsloth", "third-party", "first-party", "local-folder"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_decorated = false
+disallow_any_generics = false
+disallow_any_unimported = false
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+disallow_subclassing_any = false
+disallow_untyped_calls = false
+disallow_untyped_decorators = false
+ignore_errors = false
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+strict_optional = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_no_return = true
+warn_unused_ignores = true
+color_output = true
+pretty = true
+plugins = ["pydantic"]

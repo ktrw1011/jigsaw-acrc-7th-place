@@ -1,0 +1,15 @@
+exp_name: "gemma-2-27b-it"
+tracking: true
+base_model_name_or_path: "google/gemma-2-27b-it"
+model_name_or_path: "input/unsloth/gemma-2-27b-it-bnb-4bit"
+base_tokenizer_name_or_path: "google/gemma-2-27b-it"
+tokenizer_name_or_path: "input/unsloth/gemma-2-27b-it-bnb-4bit"
+learning_rate: 5e-5
+train_batch_size: 4
+eval_batch_size: 4
+eval_steps_ratio: 1.0
+save_steps_ratio: 1.0
+num_train_epochs: 1
+load_in_4bit: True
+load_in_8bit: False
+gradient_accumulation_steps: 1
