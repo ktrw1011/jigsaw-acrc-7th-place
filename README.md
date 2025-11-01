@@ -1,6 +1,7 @@
 # kaggle-jigsaw-acrc 7th place solution
+- [competition page](https://www.kaggle.com/competitions/jigsaw-agile-community-rules)
 - [kaggle writeup](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/writeups/7th-place-solution)
-- [submission notebook]()
+- [submission notebook](https://www.kaggle.com/code/kcotton21/jigsaw-acrc-7th-place-private-0-92760)
 
 ## setup
 - using `uv`
